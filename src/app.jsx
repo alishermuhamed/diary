@@ -1,7 +1,7 @@
 import Header from './components/header';
 import {Routes, Route} from 'react-router-dom';
 import Login from './routes/login';
-import RequireAuth from './components/require-auth';
+import RequireAuth from './routes/require-auth';
 
 function App() {
   return <>
