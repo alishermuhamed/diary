@@ -4,6 +4,7 @@
   :root {
     --bg-color: #ffffff;
     --text-color: #000000;
+    --error-text-color: #bb0000;
   }
 }
 
@@ -11,6 +12,7 @@
   :root {
     --bg-color: #121212;
     --text-color: #ffffff;
+    --error-text-color: #ff0000;
   }
 }
 
