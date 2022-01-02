@@ -1,7 +1,8 @@
 import {useLocation, Navigate} from 'react-router-dom';
+import {useEasybase} from 'easybase-react';
 
 function RequireAuth(props) {
-  const isUserSignedIn = () => false;
+  const {isUserSignedIn} = useEasybase();
   const location = useLocation();
 
   if (isUserSignedIn())
