@@ -1,0 +1,7 @@
+.header {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.header__title {
+  margin-left: 20px;
+}
