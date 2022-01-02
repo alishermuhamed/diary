@@ -1,7 +1,14 @@
+import {useEasybase} from 'easybase-react';
+import {useLocation, useNavigate} from 'react-router-dom';
 import {useState} from 'react';
 import './style.css';
 
 function Login() {
+  const {signIn} = useEasybase();
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -9,6 +16,15 @@ function Login() {
   const onSubmit = e => {
     e.preventDefault();
     setError('');
+    signIn(email, password)
+      .then(res => {
+        if (!res.success) {
+          setError('Возникла ошибка при входе');
+          return;
+        }
+        const from = location.state?.from ?? '/';
+        navigate(from, {replace: true});
+      });
   };
 
   return <main className="loginRoute">
