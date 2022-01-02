@@ -2,6 +2,7 @@ import Header from './components/header';
 import {Routes, Route} from 'react-router-dom';
 import Login from './routes/login';
 import RequireAuth from './routes/require-auth';
+import Home from './routes/home';
 
 function App() {
   return <>
@@ -20,7 +21,7 @@ function App() {
         path="/"
         element={
           <RequireAuth>
-            <div>Home</div>
+            <Home/>
           </RequireAuth>
         }
       />
