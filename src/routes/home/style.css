@@ -2,6 +2,7 @@
   margin: 20px;
 }
 
+.home-page__add-record-link,
 .home-page__add-record-link:visited {
   color: currentColor;
 }

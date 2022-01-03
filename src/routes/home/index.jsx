@@ -13,6 +13,7 @@ function Home() {
   useEffect(() => {
     db(DIARY_TABLE_NAME)
       .return()
+      .orderBy({by: 'd', sort: 'desc'})
       .all()
       .then(r => setRecords(r));
   }, []);
