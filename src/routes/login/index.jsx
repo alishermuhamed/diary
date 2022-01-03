@@ -68,7 +68,7 @@ function Login() {
       {
         error.length > 0 &&
         <div className="loginRoute__error">
-          Возникла ошибка при входе
+          {error}
         </div>
       }
 
