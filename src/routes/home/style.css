@@ -1,7 +1,7 @@
-.homeRoute {
+.home-page {
   margin: 20px;
 }
 
-.homeRoute__addRecordLink:visited {
+.home-page__add-record-link:visited {
   color: currentColor;
 }

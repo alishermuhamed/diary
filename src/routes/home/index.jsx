@@ -17,9 +17,9 @@ function Home() {
       .then(r => setRecords(r));
   }, []);
 
-  return <main className="homeRoute">
+  return <main className="home-page">
     <Link
-      className="homeRoute__addRecordLink"
+      className="home-page__add-record-link"
       to="/add"
     >
       Добавить запись
