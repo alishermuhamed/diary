@@ -1,7 +1,14 @@
 .header {
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid var(--text-color);
 }
 
 .header__title {
   margin-left: 20px;
+  text-decoration: none;
+}
+
+.header__title:visited {
+  color: currentColor;
 }
