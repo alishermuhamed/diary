@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import FieldWrapper from '../field-wrapper';
+import Button from '../button';
 import './style.css';
 
 function LoginForm(props) {
@@ -48,12 +49,11 @@ function LoginForm(props) {
       </div>
     }
 
-    <button
+    <Button
       type="submit"
       className="login-form__submit-button"
-    >
-      Войти
-    </button>
+      title="Войти"
+    />
   </form>;
 }
 

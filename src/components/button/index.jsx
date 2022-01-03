@@ -6,7 +6,7 @@ function Button(props) {
   return <button
     type={props.type ?? 'button'}
     className={className}
-    onClick={props.onClick}
+    onClick={props.onClick ?? (() => undefined)}
   >
     {props.title}
   </button>;
