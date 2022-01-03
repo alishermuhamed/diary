@@ -10,7 +10,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #121212;
+    --bg-color: #252525;
     --text-color: #ffffff;
     --error-text-color: #ff0000;
   }
@@ -28,13 +28,10 @@ body {
   color: var(--text-color);
 }
 
-input {
-  border: 1px solid var(--border-color);
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-button {
+input,
+button,
+textarea,
+select {
   border: 1px solid var(--border-color);
   background-color: var(--bg-color);
   color: var(--text-color);
