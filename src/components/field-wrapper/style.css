@@ -4,10 +4,13 @@
   flex-direction: column;
 }
 
-.field-wrapper input {
+.field-wrapper input, select, textarea {
   box-sizing: border-box;
   padding: 5px;
   width: 250px;
   height: 35px;
   font-size: 16px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
