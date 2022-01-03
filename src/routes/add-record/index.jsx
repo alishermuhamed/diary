@@ -5,7 +5,7 @@ import {DIARY_TABLE_NAME} from '../../constants';
 import AddRecordForm from '../../components/add-record-form';
 import './style.css';
 
-function Add() {
+function AddRecord() {
   const [error, setError] = useState('');
   const {db} = useEasybase();
   const location = useLocation();
@@ -42,4 +42,4 @@ function Add() {
   </main>;
 }
 
-export default Add;
+export default AddRecord;

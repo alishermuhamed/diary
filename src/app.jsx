@@ -2,7 +2,7 @@ import Header from './components/header';
 import {Routes, Route} from 'react-router-dom';
 import Login from './routes/login';
 import RequireAuth from './routes/require-auth';
-import Add from './routes/add';
+import AddRecord from './routes/add-record';
 import Home from './routes/home';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         path="add"
         element={
           <RequireAuth>
-            <Add/>
+            <AddRecord/>
           </RequireAuth>
         }
       />
