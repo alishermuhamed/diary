@@ -17,6 +17,7 @@
 }
 
 .loginRoute__fieldInput {
+  box-sizing: border-box;
   padding: 5px;
   width: 250px;
   font-size: 16px;

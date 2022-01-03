@@ -42,6 +42,8 @@ function Login() {
 
         <input
           id="email"
+          type="email"
+          required={true}
           className="loginRoute__fieldInput"
           value={email}
           onChange={e => setEmail(e.target.value)}
@@ -56,6 +58,7 @@ function Login() {
         <input
           id="password"
           type="password"
+          required={true}
           className="loginRoute__fieldInput"
           value={password}
           onChange={e => setPassword(e.target.value)}
@@ -65,7 +68,7 @@ function Login() {
       {
         error.length > 0 &&
         <div className="loginRoute__error">
-          Ошибка при входе
+          Возникла ошибка при входе
         </div>
       }
 
