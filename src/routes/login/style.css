@@ -1,37 +1,4 @@
-.loginRoute {
+.login-page {
   display: flex;
   justify-content: center;
-}
-
-.loginRoute__form {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.loginRoute__fieldWrapper {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.loginRoute__fieldInput {
-  box-sizing: border-box;
-  padding: 5px;
-  width: 250px;
-  height: 35px;
-  font-size: 16px;
-}
-
-.loginRoute__error {
-  margin-top: 10px;
-  align-self: start;
-  color: var(--error-text-color);
-}
-
-.loginRoute__submitButton {
-  margin-top: 15px;
-  width: 150px;
-  font-size: 16px;
 }
