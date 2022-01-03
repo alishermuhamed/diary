@@ -1,0 +1,38 @@
+.addRoute {
+  display: flex;
+  justify-content: center;
+}
+
+.addRoute__form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.addRoute__fieldWrapper {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.addRoute__fieldInput {
+  box-sizing: border-box;
+  padding: 5px;
+  width: 250px;
+  height: 35px;
+  font-size: 16px;
+}
+
+.addRoute__error {
+  margin-top: 10px;
+  align-self: start;
+  color: var(--error-text-color);
+}
+
+.addRoute__submitButton {
+  margin-top: 15px;
+  width: 150px;
+  font-size: 16px;
+}
