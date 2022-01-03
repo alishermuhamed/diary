@@ -19,7 +19,7 @@ function Login() {
     signIn(email, password)
       .then(res => {
         if (!res.success) {
-          setError('Возникла ошибка при входе');
+          setError('Ошибка при входе');
           return;
         }
         const from = location.state?.from ?? '/';
