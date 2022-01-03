@@ -1,7 +1,9 @@
 import {useEasybase} from 'easybase-react';
 import {useState, useEffect} from 'react';
 import {DIARY_TABLE_NAME} from '../../constants';
+import {Link} from 'react-router-dom';
 import Record from '../../components/record';
+import './style.css';
 
 function Home() {
   const {db} = useEasybase();
@@ -15,9 +17,15 @@ function Home() {
       .then(r => setRecords(r));
   }, []);
 
-  return <main>
+  return <main className="homeRoute">
+    <Link
+      className="homeRoute__addRecordLink"
+      to="/add"
+    >
+      Добавить запись
+    </Link>
     {
-      records.map(record =>
+      records?.map(record =>
         <Record
           key={record._key}
           record={record}

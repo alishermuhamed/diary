@@ -1,0 +1,7 @@
+.homeRoute {
+  margin: 20px;
+}
+
+.homeRoute__addRecordLink:visited {
+  color: currentColor;
+}
