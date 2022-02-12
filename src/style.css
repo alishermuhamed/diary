@@ -7,7 +7,8 @@
     --common-hover-bg-color: #eeeeee;
     --common-text-color: #000000;
     --error-text-color: #bb0000;
-    --disabled-text-color: #575757;
+    --secondary-text-color: #919191;
+    --disabled-text-color: #ababab;
     --common-border-color: #000000;
   }
 }
@@ -18,7 +19,8 @@
     --common-hover-bg-color: #707070;
     --common-text-color: #ffffff;
     --error-text-color: #ff0000;
-    --disabled-text-color: #ababab;
+    --secondary-text-color: #adadad;
+    --disabled-text-color: #757575;
     --common-border-color: #eeeeee;
   }
 }
