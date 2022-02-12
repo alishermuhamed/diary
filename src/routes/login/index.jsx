@@ -9,11 +9,15 @@ function Login() {
   const location = useLocation();
   const navigate = useNavigate();
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = (email, password) => {
     setError('');
+    setIsLoading(true);
     signIn(email, password)
       .then(res => {
+        setIsLoading(false);
+
         if (!res.success) {
           setError('Ошибка при входе');
           return;
@@ -27,6 +31,7 @@ function Login() {
     <LoginForm
       onSubmit={onSubmit}
       error={error}
+      isLoading={isLoading}
     />
   </main>;
 }

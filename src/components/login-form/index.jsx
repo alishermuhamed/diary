@@ -53,6 +53,7 @@ function LoginForm(props) {
       type="submit"
       className="login-form__submit-button"
       title="Войти"
+      isLoading={props.isLoading}
     />
   </form>;
 }
