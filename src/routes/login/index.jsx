@@ -14,6 +14,12 @@ function Login() {
   const onSubmit = (email, password) => {
     setError('');
     setIsLoading(true);
+
+    if (!email || !password) {
+      setError('Заполни все поля');
+      setIsLoading(false);
+    }
+
     signIn(email, password)
       .then(res => {
         setIsLoading(false);

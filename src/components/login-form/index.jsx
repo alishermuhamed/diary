@@ -23,7 +23,6 @@ function LoginForm(props) {
       <input
         id="email"
         type="email"
-        required={true}
         value={email}
         onChange={e => setEmail(e.target.value)}
       />
@@ -36,7 +35,6 @@ function LoginForm(props) {
       <input
         id="password"
         type="password"
-        required={true}
         value={password}
         onChange={e => setPassword(e.target.value)}
       />
