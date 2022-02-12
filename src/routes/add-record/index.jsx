@@ -14,6 +14,11 @@ function AddRecord() {
   const onSubmit = record => {
     setError('');
 
+    if (!record.date || !record.title || !record.mood || !record.text) {
+      setError('Заполни все поля');
+      return;
+    }
+
     db(DIARY_TABLE_NAME)
       .insert({
         d: record.date,
