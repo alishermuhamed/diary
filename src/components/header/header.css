@@ -4,15 +4,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 10px 50px;
   background-color: var(--common-bg-color);
   border-bottom: 1px solid var(--common-text-color);
 }
 
-.header__title {
+.header__title-link {
   text-decoration: none;
 }
 
-.header__title:visited {
+.header__title-link:visited {
   color: currentColor;
+}
+
+.header__title {
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .header__logout-button {
+    width: 100px;
+  }
 }
