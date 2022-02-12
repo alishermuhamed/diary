@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {useDiaryContext} from '../../contexts/diary-context';
 import {useEasybase} from 'easybase-react';
 import {useLocation, useNavigate} from 'react-router-dom';
 import {DIARY_TABLE_NAME} from '../../constants';
@@ -8,6 +9,7 @@ import './style.css';
 function AddRecord() {
   const [error, setError] = useState('');
   const [isSaving, setIsSaving] = useState(false);
+  const records = useDiaryContext();
   const {db} = useEasybase();
   const location = useLocation();
   const navigate = useNavigate();
@@ -18,6 +20,18 @@ function AddRecord() {
 
     if (!record.date || !record.title || !record.mood || !record.text) {
       setError('Заполни все поля');
+      setIsSaving(false);
+      return;
+    }
+
+    const date = new Date(record.date);
+    const hasRecordForTheDate = records.some(r => {
+      const recordDate = new Date(r.d);
+      return recordDate.getTime() === date.getTime();
+    });
+
+    if (hasRecordForTheDate) {
+      setError('Запись на этот день уже есть');
       setIsSaving(false);
       return;
     }
