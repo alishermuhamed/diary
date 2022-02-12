@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import FieldWrapper from '../field-wrapper/field-wrapper';
+import Input from '../input/input';
 import Button from '../button/button';
 import './login-form.css';
 
@@ -20,11 +21,11 @@ function LoginForm(props) {
       fieldId="email"
       label="Электронная почта"
     >
-      <input
+      <Input
         id="email"
         type="email"
         value={email}
-        onChange={e => setEmail(e.target.value)}
+        onChange={setEmail}
       />
     </FieldWrapper>
 
@@ -32,11 +33,11 @@ function LoginForm(props) {
       fieldId="password"
       label="Пароль"
     >
-      <input
+      <Input
         id="password"
         type="password"
         value={password}
-        onChange={e => setPassword(e.target.value)}
+        onChange={setPassword}
       />
     </FieldWrapper>
 
