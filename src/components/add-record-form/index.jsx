@@ -2,12 +2,19 @@ import {useState} from 'react';
 import {getTodayStringForDateInput} from '../../utils';
 import {MOODS} from '../../constants';
 import FieldWrapper from '../field-wrapper';
+import Select from '../select';
 import Button from '../button';
 import './style.css';
 
 function AddRecordForm(props) {
+  const moods = Object.getOwnPropertyNames(MOODS).map(m => ({
+    key: m,
+    value: m,
+    text: MOODS[m]
+  }));
+
   const [date, setDate] = useState(getTodayStringForDateInput());
-  const [mood, setMood] = useState(MOODS.fine);
+  const [mood, setMood] = useState(moods[0].value);
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
 
@@ -37,21 +44,11 @@ function AddRecordForm(props) {
       fieldId="mood"
       label="Настроение"
     >
-      <select
+      <Select
         value={mood}
-        onChange={e => setMood(e.target.value)}
-      >
-        {
-          Object.getOwnPropertyNames(MOODS).map(mood =>
-            <option
-              key={mood}
-              value={mood}
-            >
-              {MOODS[mood]}
-            </option>
-          )
-        }
-      </select>
+        onChange={setMood}
+        options={moods}
+      />
     </FieldWrapper>
 
     <FieldWrapper
