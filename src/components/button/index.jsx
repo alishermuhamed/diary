@@ -7,8 +7,13 @@ function Button(props) {
     type={props.type ?? 'button'}
     className={className}
     onClick={props.onClick ?? (() => undefined)}
+    disabled={props.isLoading ?? false}
   >
-    {props.title}
+    {
+      props.isLoading
+        ? 'Loading...'
+        : props.title
+    }
   </button>;
 }
 
