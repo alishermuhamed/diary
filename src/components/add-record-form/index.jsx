@@ -7,7 +7,7 @@ import './style.css';
 
 function AddRecordForm(props) {
   const [date, setDate] = useState(getTodayStringForDateInput());
-  const [mood, setMood] = useState(MOODS);
+  const [mood, setMood] = useState(MOODS.fine);
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
 
