@@ -4,7 +4,7 @@ import Record from '../../components/record';
 import './style.css';
 
 function Home() {
-  const records = useDiaryContext();
+  const {records} = useDiaryContext();
 
   return <main className="home-page">
     <Link

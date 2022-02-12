@@ -19,8 +19,22 @@ export function DiaryProvider(props) {
     return dbInstance;
   });
 
+  const addRecord = record => db(DIARY_TABLE_NAME)
+    .insert({
+      d: record.date,
+      title: record.title,
+      mood: record.mood,
+      text: record.text
+    })
+    .one();
+
+  const value = {
+    records,
+    addRecord
+  };
+
   return <DiaryContext.Provider
-    value={records}
+    value={value}
     {...props}
   />;
 }
