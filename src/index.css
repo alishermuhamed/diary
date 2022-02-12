@@ -3,22 +3,22 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-color: #ffffff;
+    --common-bg-color: #ffffff;
+    --common-hover-bg-color: #eeeeee;
     --text-color: #000000;
     --error-text-color: #bb0000;
+    --border-color: #000000;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #252525;
+    --common-bg-color: #252525;
+    --common-hover-bg-color: #707070;
     --text-color: #ffffff;
     --error-text-color: #ff0000;
+    --border-color: #eeeeee;
   }
-}
-
-:root {
-  --border-color: var(--text-color);
 }
 
 * {
@@ -28,6 +28,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg-color);
+  background-color: var(--common-bg-color);
   color: var(--text-color);
 }
