@@ -34,7 +34,6 @@ function AddRecordForm(props) {
       <input
         id="date"
         type="date"
-        required={true}
         value={date}
         onChange={e => setDate(e.target.value)}
       />
@@ -84,6 +83,7 @@ function AddRecordForm(props) {
       type="submit"
       className="add-record-form__button"
       title="Сохранить"
+      isLoading={props.isSaving}
     />
 
     <Button

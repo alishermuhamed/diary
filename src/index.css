@@ -5,9 +5,10 @@
   :root {
     --common-bg-color: #ffffff;
     --common-hover-bg-color: #eeeeee;
-    --text-color: #000000;
+    --common-text-color: #000000;
     --error-text-color: #bb0000;
-    --border-color: #000000;
+    --disabled-text-color: #575757;
+    --common-border-color: #000000;
   }
 }
 
@@ -15,9 +16,10 @@
   :root {
     --common-bg-color: #252525;
     --common-hover-bg-color: #707070;
-    --text-color: #ffffff;
+    --common-text-color: #ffffff;
     --error-text-color: #ff0000;
-    --border-color: #eeeeee;
+    --disabled-text-color: #ababab;
+    --common-border-color: #eeeeee;
   }
 }
 
@@ -29,5 +31,5 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--common-bg-color);
-  color: var(--text-color);
+  color: var(--common-text-color);
 }

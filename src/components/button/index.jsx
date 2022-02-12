@@ -11,7 +11,7 @@ function Button(props) {
   >
     {
       props.isLoading
-        ? 'Loading...'
+        ? 'Загрузка...'
         : props.title
     }
   </button>;

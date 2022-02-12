@@ -7,15 +7,18 @@ import './style.css';
 
 function AddRecord() {
   const [error, setError] = useState('');
+  const [isSaving, setIsSaving] = useState(false);
   const {db} = useEasybase();
   const location = useLocation();
   const navigate = useNavigate();
 
   const onSubmit = record => {
     setError('');
+    setIsSaving(true);
 
     if (!record.date || !record.title || !record.mood || !record.text) {
       setError('Заполни все поля');
+      setIsSaving(false);
       return;
     }
 
@@ -28,6 +31,8 @@ function AddRecord() {
       })
       .one()
       .then(res => {
+        setIsSaving(false);
+
         if (res !== 1) {
           setError('Ошибка при сохранении');
           return;
@@ -43,6 +48,7 @@ function AddRecord() {
       onSubmit={onSubmit}
       error={error}
       onCancelClick={() => navigate(-1)}
+      isSaving={isSaving}
     />
   </main>;
 }
