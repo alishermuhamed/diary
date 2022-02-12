@@ -1,6 +1,8 @@
 import {useState} from 'react';
 import {getTodayStringForDateInput} from '../../utils';
 import FieldWrapper from '../field-wrapper/field-wrapper';
+import Input from '../input/input';
+import TextArea from '../textArea/textArea';
 import Button from '../button/button';
 import './add-record-form.css';
 
@@ -22,11 +24,11 @@ function AddRecordForm(props) {
       fieldId="date"
       label="Дата"
     >
-      <input
+      <Input
         id="date"
         type="date"
         value={date}
-        onChange={e => setDate(e.target.value)}
+        onChange={setDate}
       />
     </FieldWrapper>
 
@@ -34,10 +36,10 @@ function AddRecordForm(props) {
       fieldId="title"
       label="Заголовок"
     >
-      <input
+      <Input
         id="title"
         value={title}
-        onChange={e => setTitle(e.target.value)}
+        onChange={setTitle}
       />
     </FieldWrapper>
 
@@ -45,11 +47,10 @@ function AddRecordForm(props) {
       fieldId="text"
       label="Текст"
     >
-      <textarea
+      <TextArea
         id="text"
-        className="add-record-form__textarea"
         value={text}
-        onChange={e => setText(e.target.value)}
+        onChange={setText}
       />
     </FieldWrapper>
 
