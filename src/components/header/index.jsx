@@ -1,7 +1,8 @@
 import {Link} from 'react-router-dom';
+import Button from '../button';
 import './style.css';
 
-function Header() {
+function Header(props) {
   return <header className="header">
     <Link
       className="header__title"
@@ -9,6 +10,14 @@ function Header() {
     >
       <h1>Дневник</h1>
     </Link>
+
+    {
+      props.isUserSignedIn &&
+      <Button
+        onClick={props.onSignOut}
+        title="Выйти"
+      />
+    }
   </header>;
 }
 
