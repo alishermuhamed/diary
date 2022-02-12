@@ -1,8 +1,18 @@
 .record {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
 
+.record__date {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+}
+
 .record__title {
+  margin: 15px 0;
+}
+
+.record__text {
   margin: 0;
 }

@@ -6,23 +6,21 @@ function Record(props) {
   const date = new Date(d).toLocaleDateString();
 
   return <article className="record">
-    <h2>{date}</h2>
+    <span className="record__date">
+      {date}
+    </span>
 
-    {
-      title &&
-      <h3 className="record__title">
-        {title}
-      </h3>
-    }
+    <h2 className="record__title">
+      {title}
+    </h2>
 
-    {
-      mood &&
-      <span>
-        Настроение: {MOODS[mood]}
-      </span>
-    }
+    {/*<span>*/}
+    {/*  Настроение: {MOODS[mood]}*/}
+    {/*</span>*/}
 
-    <p>{text}</p>
+    <p className="record__text">
+      {text}
+    </p>
   </article>;
 }
 
