@@ -1,7 +1,7 @@
 .button {
   height: 30px;
   width: 150px;
-  font-size: 16px;
+  font-size: 1em;
   background-color: var(--common-bg-color);
   color: var(--common-text-color);
   border: 1px solid var(--common-border-color);
