@@ -1,7 +1,7 @@
 import {useState} from 'react';
-import FieldWrapper from '../field-wrapper';
-import Button from '../button';
-import './style.css';
+import FieldWrapper from '../field-wrapper/field-wrapper';
+import Button from '../button/button';
+import './login-form.css';
 
 function LoginForm(props) {
   const [email, setEmail] = useState('');

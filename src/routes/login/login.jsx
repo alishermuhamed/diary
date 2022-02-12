@@ -1,7 +1,7 @@
 import {useEasybase} from 'easybase-react';
 import {useLocation, useNavigate} from 'react-router-dom';
 import {useState} from 'react';
-import LoginForm from '../../components/login-form';
+import LoginForm from '../../components/login-form/login-form';
 import './login.css';
 
 function Login() {

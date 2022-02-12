@@ -1,4 +1,4 @@
-import './style.css';
+import './button.css';
 
 function Button(props) {
   const className = 'button' + (props.className ? ` ${props.className}` : '');

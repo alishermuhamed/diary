@@ -1,5 +1,5 @@
 import {useEasybase} from 'easybase-react';
-import Header from './components/header';
+import Header from './components/header/header';
 import {Routes, Route} from 'react-router-dom';
 import Login from './routes/login/login';
 import RequireAuth from './routes/require-auth';

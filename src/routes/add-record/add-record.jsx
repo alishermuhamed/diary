@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {useDiaryContext} from '../../contexts/diary-context';
 import {useLocation, useNavigate} from 'react-router-dom';
-import AddRecordForm from '../../components/add-record-form';
+import AddRecordForm from '../../components/add-record-form/add-record-form';
 import './add-record.css';
 
 function AddRecord() {

@@ -1,6 +1,6 @@
 import {useDiaryContext} from '../../contexts/diary-context';
 import {Link} from 'react-router-dom';
-import Record from '../../components/record';
+import Record from '../../components/record/record';
 import './home.css';
 
 function Home() {

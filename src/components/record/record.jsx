@@ -1,4 +1,4 @@
-import './style.css';
+import './record.css';
 
 function Record(props) {
   const {d, title, text} = props.record;

@@ -1,8 +1,8 @@
 import {useState} from 'react';
 import {getTodayStringForDateInput} from '../../utils';
-import FieldWrapper from '../field-wrapper';
-import Button from '../button';
-import './style.css';
+import FieldWrapper from '../field-wrapper/field-wrapper';
+import Button from '../button/button';
+import './add-record-form.css';
 
 function AddRecordForm(props) {
   const [date, setDate] = useState(getTodayStringForDateInput());

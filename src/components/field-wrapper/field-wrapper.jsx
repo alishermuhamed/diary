@@ -1,4 +1,4 @@
-import './style.css';
+import './field-wrapper.css';
 
 function FieldWrapper(props) {
   return <div className="field-wrapper">
