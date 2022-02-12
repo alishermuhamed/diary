@@ -4,7 +4,7 @@ import {EasybaseProvider} from 'easybase-react';
 import ebconfig from './ebconfig';
 import {BrowserRouter} from 'react-router-dom';
 import App from './app';
-import './index.css';
+import './style.css';
 
 ReactDOM.render(
   <React.StrictMode>
