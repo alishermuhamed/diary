@@ -18,6 +18,7 @@ function Login() {
     if (!email || !password) {
       setError('Заполни все поля');
       setIsLoading(false);
+      return;
     }
 
     signIn(email, password)
