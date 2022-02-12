@@ -1,7 +1,7 @@
 import {useDiaryContext} from '../../contexts/diary-context';
 import {Link} from 'react-router-dom';
 import Record from '../../components/record';
-import './style.css';
+import './home.css';
 
 function Home() {
   const {records} = useDiaryContext();

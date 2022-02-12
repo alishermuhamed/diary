@@ -1,10 +1,10 @@
 import {useEasybase} from 'easybase-react';
 import Header from './components/header';
 import {Routes, Route} from 'react-router-dom';
-import Login from './routes/login';
+import Login from './routes/login/login';
 import RequireAuth from './routes/require-auth';
-import AddRecord from './routes/add-record';
-import Home from './routes/home';
+import AddRecord from './routes/add-record/add-record';
+import Home from './routes/home/home';
 
 function App() {
   const {isUserSignedIn, signOut} = useEasybase();

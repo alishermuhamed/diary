@@ -2,7 +2,7 @@ import {useState} from 'react';
 import {useDiaryContext} from '../../contexts/diary-context';
 import {useLocation, useNavigate} from 'react-router-dom';
 import AddRecordForm from '../../components/add-record-form';
-import './style.css';
+import './add-record.css';
 
 function AddRecord() {
   const [error, setError] = useState('');
