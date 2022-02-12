@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.add-record-form__textarea {
+  resize: vertical;
+}
+
 .add-record-form__error {
   margin-top: 10px;
   align-self: start;

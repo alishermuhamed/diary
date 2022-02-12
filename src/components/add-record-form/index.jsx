@@ -67,6 +67,7 @@ function AddRecordForm(props) {
     >
       <textarea
         id="text"
+        className="add-record-form__textarea"
         value={text}
         onChange={e => setText(e.target.value)}
       />
