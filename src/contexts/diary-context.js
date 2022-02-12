@@ -23,7 +23,6 @@ export function DiaryProvider(props) {
     .insert({
       d: record.date,
       title: record.title,
-      mood: record.mood,
       text: record.text
     })
     .one();

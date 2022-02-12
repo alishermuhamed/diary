@@ -15,7 +15,7 @@ function AddRecord() {
     setError('');
     setIsSaving(true);
 
-    if (!record.date || !record.title || !record.mood || !record.text) {
+    if (!record.date || !record.title || !record.text) {
       setError('Заполни все поля');
       setIsSaving(false);
       return;

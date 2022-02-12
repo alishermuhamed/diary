@@ -1,8 +1,7 @@
-import {MOODS} from '../../constants';
 import './style.css';
 
 function Record(props) {
-  const {d, title, mood, text} = props.record;
+  const {d, title, text} = props.record;
   const date = new Date(d).toLocaleDateString();
 
   return <article className="record">
@@ -13,10 +12,6 @@ function Record(props) {
     <h2 className="record__title">
       {title}
     </h2>
-
-    {/*<span>*/}
-    {/*  Настроение: {MOODS[mood]}*/}
-    {/*</span>*/}
 
     <p className="record__text">
       {text}
