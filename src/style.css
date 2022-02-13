@@ -1,29 +1,7 @@
-@import-normalize;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --common-bg-color: #ffffff;
-    --common-hover-bg-color: #eeeeee;
-    --common-text-color: #000000;
-    --error-text-color: #bb0000;
-    --secondary-text-color: #919191;
-    --disabled-text-color: #ababab;
-    --common-border-color: #000000;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --common-bg-color: #252525;
-    --common-hover-bg-color: #707070;
-    --common-text-color: #ffffff;
-    --error-text-color: #ff0000;
-    --secondary-text-color: #adadad;
-    --disabled-text-color: #757575;
-    --common-border-color: #eeeeee;
-  }
-}
+@import 'themes/colors.css';
+@import 'themes/light.css';
+@import 'themes/dark.css';
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -32,9 +10,9 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--common-bg-color);
+  background-color: var(--bg-color);
   font-size: 20px;
-  color: var(--common-text-color);
+  color: var(--text-color);
 }
 
 @media only screen and (max-width: 600px) {

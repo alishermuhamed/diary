@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 50px;
-  background-color: var(--common-bg-color);
-  border-bottom: 1px solid var(--common-text-color);
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .header__title-link {

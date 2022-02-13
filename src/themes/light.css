@@ -1,0 +1,22 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    /*page*/
+    --bg-color: var(--color-white);
+    --border-color: var(--color-black);
+
+    /*text*/
+    --text-color: var(--color-black);
+    --error-text-color: var(--color-red);
+    --secondary-text-color: var(--color-darkgray);
+    --disabled-text-color: var(--color-lightgray);
+
+    /*input*/
+    --input-bg-color: var(--color-white);
+    --input-border-color: var(--color-black);
+
+    /*button*/
+    --button-bg-color: var(--color-white);
+    --button-hover-bg-color: var(--color-lightgray);
+    --button-border-color: var(--color-black);
+  }
+}

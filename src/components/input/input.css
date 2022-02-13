@@ -5,8 +5,8 @@
   box-sizing: border-box;
   line-height: 1.5em;
   font-size: 1em;
-  border: 1px solid var(--common-border-color);
+  border: 1px solid var(--input-border-color);
   border-radius: 0;
-  background-color: var(--common-bg-color);
-  color: var(--common-text-color);
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
 }
