@@ -7,13 +7,13 @@ import Button from '../button/button';
 import './add-record-form.css';
 
 function AddRecordForm(props) {
-  const [date, setDate] = useState(getStringForDateInput());
+  const [d, setD] = useState(getStringForDateInput());
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
 
   const onSubmit = e => {
     e.preventDefault();
-    props.onSubmit({date, title, text});
+    props.onSubmit({d, title, text});
   };
 
   return <form
@@ -27,8 +27,8 @@ function AddRecordForm(props) {
       <Input
         id="date"
         type="date"
-        value={date}
-        onChange={setDate}
+        value={d}
+        onChange={setD}
       />
     </FieldWrapper>
 

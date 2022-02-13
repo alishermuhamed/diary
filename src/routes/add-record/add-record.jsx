@@ -15,13 +15,13 @@ function AddRecord() {
     setError('');
     setIsSaving(true);
 
-    if (!record.date || !record.title || !record.text) {
+    if (!record.d || !record.title || !record.text) {
       setError('Заполни все поля');
       setIsSaving(false);
       return;
     }
 
-    const date = new Date(record.date);
+    const date = new Date(record.d);
     const hasRecordForTheDate = records.some(r => {
       const recordDate = new Date(r.d);
       return recordDate.getTime() === date.getTime();

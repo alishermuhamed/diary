@@ -1,4 +1,4 @@
-import {createContext, useContext, useState} from 'react';
+import {createContext, useContext, useEffect, useState} from 'react';
 import {useEasybase} from 'easybase-react';
 import {DIARY_TABLE_NAME} from '../constants';
 
@@ -6,31 +6,30 @@ const DiaryContext = createContext(undefined);
 
 export function DiaryProvider(props) {
   const [records, setRecords] = useState([]);
-  const {useReturn, db} = useEasybase();
+  const {db} = useEasybase();
 
-  useReturn(() => {
-    const dbInstance = db(DIARY_TABLE_NAME).return();
-
-    dbInstance
+  useEffect(() => {
+    db(DIARY_TABLE_NAME, true)
+      .return()
       .orderBy({by: 'd', sort: 'desc'})
       .all()
       .then(res => {
         if (!Array.isArray(res))
           return;
-
         setRecords(res);
       });
-
-    return dbInstance;
-  });
+  }, []);
 
   const addRecord = record => db(DIARY_TABLE_NAME)
-    .insert({
-      d: record.date,
-      title: record.title,
-      text: record.text
-    })
-    .one();
+    .insert(record)
+    .one()
+    .then(res => {
+      if (res === 1) {
+        const newRecords = [record, ...records];
+        setRecords(newRecords);
+      }
+      return res;
+    });
 
   const value = {
     records,
