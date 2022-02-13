@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {getStringForDateInput} from '../../utils/utils';
+import {getStringForDateInput} from '../../utils/date-input-string';
 import FieldWrapper from '../field-wrapper/field-wrapper';
 import Input from '../input/input';
 import TextArea from '../textArea/textArea';
