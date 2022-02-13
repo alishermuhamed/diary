@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {getTodayStringForDateInput} from '../../utils';
+import {getTodayStringForDateInput} from '../../utils/utils';
 import FieldWrapper from '../field-wrapper/field-wrapper';
 import Input from '../input/input';
 import TextArea from '../textArea/textArea';
