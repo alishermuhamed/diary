@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {getTodayStringForDateInput} from '../../utils/utils';
+import {getStringForDateInput} from '../../utils/utils';
 import FieldWrapper from '../field-wrapper/field-wrapper';
 import Input from '../input/input';
 import TextArea from '../textArea/textArea';
@@ -7,7 +7,7 @@ import Button from '../button/button';
 import './add-record-form.css';
 
 function AddRecordForm(props) {
-  const [date, setDate] = useState(getTodayStringForDateInput());
+  const [date, setDate] = useState(getStringForDateInput());
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
 
