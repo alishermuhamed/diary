@@ -14,7 +14,12 @@ export function DiaryProvider(props) {
     dbInstance
       .orderBy({by: 'd', sort: 'desc'})
       .all()
-      .then(records => setRecords(records));
+      .then(res => {
+        if (!Array.isArray(res))
+          return;
+
+        setRecords(res);
+      });
 
     return dbInstance;
   });
